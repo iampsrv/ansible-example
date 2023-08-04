@@ -10,7 +10,7 @@
         state: started
       when: desired_state == 'started'
 
-    # Other tasks (if any) can go here
+    # ansible-playbook -e "desired_state=stopped" role_test.yml
 
     - name: Stop Docker container
       docker_container:
