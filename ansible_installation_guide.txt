@@ -28,6 +28,8 @@ ansible -m ping slave1
 ansible -m ping -u ubuntu all	
 ansible -m ping all -i my_inventory.ini
 
+ansible playbook <>.yaml
+
 ------------------------------------------------------------------------
 [group_name]
 host1 ansible_ssh_host=hostname_or_ip_address ansible_ssh_user=username ansible_ssh_pass=password
