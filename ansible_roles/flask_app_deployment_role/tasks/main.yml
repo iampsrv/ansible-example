@@ -3,6 +3,10 @@
   git:
     repo: "{{ repo_url }}"
     dest: "{{ repo_dest }}"
+    update: yes
+  register: git_clone
+  changed_when: "'Updated' in git_clone.stdout"
+  notify: Restart Flask Application
   tags: 
     - clone_repo
 
